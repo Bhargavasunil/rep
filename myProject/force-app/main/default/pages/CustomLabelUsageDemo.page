@@ -1,0 +1,7 @@
+<apex:page controller="CustomLabelUsageDemoController">
+    <apex:form >
+        <apex:pageBlock >
+            Value stored in the custom label is: <b>{!customLabelValue}</b>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

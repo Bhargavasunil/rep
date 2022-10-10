@@ -1,0 +1,9 @@
+<apex:page controller="OpportunityNameList" action="{!getOpportunityNames}">
+    <apex:pageBlock > 
+        <apex:pageBlockTable value="{!oppList}" var="opp" >
+            <apex:column value="{!opp.Name}" headerValue="Opportunity Name"/>
+            <apex:column value="{!opp.Amount}" headerValue="Opportunity Amount"/>
+            <apex:column value="{!opp.StageName}" headerValue="Opportunity Stage"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

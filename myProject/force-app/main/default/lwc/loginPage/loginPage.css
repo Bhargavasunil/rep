@@ -1,0 +1,24 @@
+.one{
+    padding:0px 66px 0px;
+    color:blue;
+}
+
+
+.reset{
+    margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+    margin-left: 16em;
+}
+a:link{
+   color:blue;
+}
+a:visited{
+    color:blue;
+}
+a:hover{
+    color:red;
+}
+a:hover{
+    color:orange;
+}
