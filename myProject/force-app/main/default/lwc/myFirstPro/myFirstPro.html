@@ -1,8 +1,6 @@
 <template>
-    <template if:true={name}>
-        <p>{name}</p>
-    </template>
-    <template if:false={name}>
-        <p>Name is Empty </p>
-    </template>
+    <lightning-card title="Example" icon-name="utility:user">
+       <h2 class="slds-text-heading_large">Welcome! {varMyvalue}</h2>
+        <lightning-input label="Give the name to show dynamically" value={varMyvalue} onchange={onchange}></lightning-input>
+    </lightning-card>
 </template>

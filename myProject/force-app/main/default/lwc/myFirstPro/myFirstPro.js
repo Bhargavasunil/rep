@@ -1,6 +1,9 @@
-import { LightningElement,api,track } from 'lwc';
-
+import { LightningElement,api,track, wire } from 'lwc';
 export default class MyFirstPro extends LightningElement {
-    @api name= 'Bhargava';
-    @track jobTitle = 'Salesforce Developer';
+    varMyvalue = 'Gupta';
+    onchange(event){
+           this.varMyvalue=event.target.value;
+    }
+    
+  
 }
