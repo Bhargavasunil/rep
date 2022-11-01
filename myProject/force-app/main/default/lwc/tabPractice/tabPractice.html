@@ -5,25 +5,26 @@
             <div class="slds-box slds-align_absolute-center" style="background-color:rgb(194, 187, 187);padding:8%">
             <h2 style="color:blue;text-align:center;font-size: 25px;"></h2>
             <div class="slds-box slds-size_1-of-3 sbox">
+                <form>
                 <lightning-avatar size="large" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" class="slds-align_absolute-center" variant="circle"></lightning-avatar><br/>
                 <div class="slds-form-element">
                     <label class="slds-form-element__label" for="text-input-id-1">UserName</label>
                     <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
                         <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:user"></lightning-icon>
-                        <input type="text" id="text-input-id-1" placeholder="example@gmail.com" class="slds-input" style="height: 40px;width:101%"/>
+                        <input type="text" id="text-input-id-1" placeholder={userId} onchange={usernameHandler} class="slds-input" style="height: 40px;width:101%"/>
                     </div>
                 </div>
                 <div class="slds-form-element">
                     <label class="slds-form-element__label" for="text-input-id-2">Password</label>
                     <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
                         <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:preview"></lightning-icon>
-                        <input type="password" id="text-input-id-2" class="slds-input" style="height: 40px;width:101%;"/>
+                        <input type="password" id="text-input-id-2" onchange={passwordHandler} class="slds-input" style="height: 40px;width:101%;"/>
                     </div>
                 </div> <br/>
                 <div class="slds-grid">
                      <div class="slds-col slds-text-align_center">
                         <lightning-button label="Submit" variant="neutral"></lightning-button>&nbsp;
-                        <lightning-button label="Cancel" variant="neutral"></lightning-button>
+                        <lightning-button label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
                      </div><br/>
                 </div>    
                          <div class="slds-grid">
@@ -31,7 +32,8 @@
                                 <p><a href="default.asp" style="text-decoration:underline">Forget Password</a></p>
                             </div>
                          </div>         
-                </div>   
+                        </form>
+                      </div>   
             </div>
         </lightning-tab>
         <lightning-tab label="SignIn">

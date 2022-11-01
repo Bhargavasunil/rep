@@ -1,5 +1,10 @@
 <template>
-    <lightning-card title="Code Builder Demo">
-        <p>component is created by using code builder</p>
+    <lightning-card title="Accessing elements">
+          <template for:each={data} for:item="item">
+            <div class='name' key={item.id}>
+                   {item.id}-{item.name}
+            </div>          
+          </template>
+          <lightning-button variant="brand" label="Clik" title="Clik" onclick={clikHandler}></lightning-button>
     </lightning-card>
 </template>

@@ -1,0 +1,48 @@
+<template>
+    <form>
+        <template if:true={toShowResult}>
+            <div class={isScoredFull}>You have scored {correctAnswers} out of {myQuestions.length}</div>
+        </template>
+    <lightning-card title="Quiz app in Lwc">
+        <div class="slds-m-around_medium">
+            <template for:each={myQuestions} for:item="quiz" for:index="Index"> <!--Here for:index is optional because we are not using it -->
+                <div key={quiz.id}> 
+                    <div class="ques">
+                        <strong>{quiz.id}-{quiz.question}</strong>
+                        <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                            <div class="slds-col">
+                                <input type="radio" name={quiz.id} value="a" onchange={radioHandler}>
+                                {quiz.answers.a}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={quiz.id} value="b" onchange={radioHandler}>
+                                {quiz.answers.b}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={quiz.id} value="c" onchange={radioHandler}>
+                                {quiz.answers.c}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="slds-grid slds-gutters bg">
+            <div class="slds-col slds-size_1-of-10">
+                <lightning-button variant="Brand" 
+                label="Submit" 
+                class="slds-m-around_small" 
+                disabled={allNotSelected}
+                title="submit form"
+                onclick={submitHandler}></lightning-button>
+            </div>
+            <div class="slds-col slds-size_1-of-10">
+                <lightning-button variant="Reset" 
+                label="Reset"  
+                title="reset form"
+                onclick={resetHandler}></lightning-button>  
+            </div>
+                </div>   
+    </lightning-card>
+</form>
+</template>
