@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Account Filter">
+        <lightning-input type="number" label="Please enter value" onchange={changeHandler} class="slds-m-around_small" style="width:60rem;">  </lightning-input><br/>
+        <div class="button">
+            <lightning-button label="Submit" type="submit" variant="brand" onclick={submitHandler} class="slds-align_absolute-center"></lightning-button>
+        </div>
+    </lightning-card>   
+    <lightning-card>
+        <lightning-dual-listbox name="languages"
+        label="Select Accounts"
+        source-label="Available"
+        selected-label="Selected"
+        field-level-help="Filter Account records based on Annual revenue"
+        options={options}
+        onchange={handleChange}
+        class="slds-m-around_small"></lightning-dual-listbox>
+        <div class="slds-box" >
+            <p>Selected values are: {_selected}</p>
+        </div>
+    </lightning-card>          
+</template>

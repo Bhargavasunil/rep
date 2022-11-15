@@ -1,0 +1,13 @@
+:host{
+    --slds-c-button-brand-color-background: orange;
+}
+.button{
+    box-sizing:border-box;
+    border:1px solid #c9c9c9;
+    height:3rem;
+    margin: auto 11%;
+    padding:7px 0px 0px 0px;
+    border-radius: 11px;
+    background: #aeaeae;
+
+}

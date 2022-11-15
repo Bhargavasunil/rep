@@ -1,0 +1,11 @@
+.card{
+    background: var(--lwc-colorBackgroundAltInverse);
+    color: var(--lwc-colorTextIconInverse);
+    box-shadow: var(--lwc-shadowDrag);  
+    height:310px;
+    width:250px;
+}
+.main{
+      background: var(--c-myBackgroundColor);
+      color:var(--c-myTextColor);
+}

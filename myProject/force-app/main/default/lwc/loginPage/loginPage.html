@@ -7,7 +7,7 @@
         <label class="slds-form-element__label" for="text-input-id-1">UserName</label>
         <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
             <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:user"></lightning-icon>
-            <input type="text" id="text-input-id-1" placeholder="example@gmail.com" class="slds-input" style="height: 40px;width:101%"/>
+            <input type="text" id="text-input-id-1" placeholder="example@gmail.com" class="slds-input enter" style="height: 40px;width:101%"/>
         </div>
     </div>
     <div class="slds-form-element">
@@ -22,7 +22,7 @@
              <p><a href="default.asp" style="text-decoration:underline">Forget Password</a></p>
          </div>
          <div class="slds-col slds-size_1-of-2 slds-text-align_right">
-            <lightning-button label="Submit" variant="neutral"></lightning-button>&nbsp;
+            <lightning-button label="Submit" variant="neutral" onsubmit={submitHandler}></lightning-button>&nbsp;
             <lightning-button label="Cancel" variant="neutral"></lightning-button>
          </div>
         </div>

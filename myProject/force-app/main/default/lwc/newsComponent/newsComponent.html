@@ -1,0 +1,46 @@
+<template>
+    <div class="container">
+        <div class="slds-grid slds-gutters slds-wrap justify-center">
+            <template for:each={result} for:item="item">
+               <div class="card" key={item.id}>
+                <img class="card-Image" src={item.urlToImage}>
+                <div class="card-text" >
+                   <span class="data">{item.publishedAt}</span>
+                   <h2>{item.title}</h2>
+                </div>
+                <div class="card-stats" onclick={showModal} data-item={item.id}>Read More...</div>
+               </div>
+            </template>
+        </div>
+    </div>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class={modalClass}>
+        <div class="slds-modal__container">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="close" onclick={closeModal}>
+             <lightning-icon icon-name='utility:close'
+             alternative-text="Close"
+             size="small"
+             variant="inverse"></lightning-icon>
+          </button>
+          <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">{selectedNews.title}</h1>
+          </div>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <img src={selectedNews.urlToImage}>
+            <div>
+                <div>
+                    source-{selectedNews.name}
+                </div>
+                <div>
+                    {selectedNews.data}
+                </div>
+              </div>
+              <p class="content">{selectedNews.content}<a href={selectedNews.url} target="_blank" >Go to source</a></p>
+              <!--Author name some times available and some times not available-->
+              <template if:true={selectedNews.author}>
+                <div class="footer">{selectedNews.author}</div>
+              </template>
+          </div>
+        </div>
+      </section>
+      <div class={modalBackdropClass} role="presentation"></div>
+</template>

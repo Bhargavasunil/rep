@@ -1,0 +1,6 @@
+:host {
+    --sds-c-input-color-background: white;
+    --sds-c-card-color-background: #f2f2f2;  
+    --slds-c-card-radius-border:0.5rem;
+    --sds-input_borders:0rem;
+}
