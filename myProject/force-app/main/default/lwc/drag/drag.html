@@ -1,0 +1,33 @@
+<template>
+    <div class="tile">
+    <div class="slds-app-launcher__tile-figure">
+        <div class="slds-avatar slds-avatar_large">
+            <abbr class="slds-avatar__initials slds-icon-custom-27" title="My card">NR</abbr>
+        </div>
+    </div>
+    <div class="slds-app-launcher__tile-body body">
+         <a href="/lightning/n/LWC_New_Room"><span class="link">News Room</span></a>
+         <p class="data-1">The purpose of the app is to  display latest news articles and  
+         </p><span>
+            <template if:true={check}>
+            <button class="slds-button slds-button_icon " title="moreinfo" onclick={showMoreInfo1}>
+            <lightning-button-icon icon-name="utility:jump_to_top"
+            alternative-text="more"
+            size="small"
+            variant="bare"
+            class="icon-Button" ></lightning-button-icon>
+         </button>
+        </template>
+        <template if:false={check}>
+            <button class="slds-button slds-button_icon " title="moreinfo" onclick={showMoreInfo2}>
+                <lightning-button-icon icon-name="utility:threedots"
+                alternative-text="more"
+                size="small"
+                variant="bare"
+                class="icon-Button" ></lightning-button-icon>
+             </button>
+        </template>
+    </span>
+    </div>
+</div>
+</template>

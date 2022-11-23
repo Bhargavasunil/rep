@@ -1,0 +1,27 @@
+
+.tile{
+    background-color: white;
+    display:grid;
+    grid-template-columns: 4.5rem 23rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    
+}
+.body{
+    background-color: #f8f8f8;
+}
+a:link{
+    color:red;
+}
+a:visited{
+    color:blue;
+} 
+a:hover{
+    color:orange;
+}
+.link{
+    font-size:1rem;
+}
+:host{
+    --sds-c-button-text-color:blue;
+}

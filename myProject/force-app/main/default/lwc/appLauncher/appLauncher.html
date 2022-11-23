@@ -1,0 +1,89 @@
+<template>
+    <div class="slds-box">
+        <div class="slds-section slds-is-open section section1">
+            <h3 class="slds-section_title slds-theme_shade slds-theme_inverse head">
+                <span class="slds-truncate slds-p-horizantal_medium" title="All Apps">Apps</span>
+            </h3>
+        </div>
+        <div class="slds-section_content" aria-hidden="false" id="apps-content">
+            <ul class="slds-grid slds-grid_pull-padded slds-wrap">
+                <li class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
+                  <div draggable="true" class="slds-app-launcher__tile slds-text-link_reset slds-is-draggable">
+                    <div class="slds-app-launcher__tile-figure">
+                      <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                        <img src={svgURL} alt="" width="50" height="50">
+                      </span>
+                    </div>
+                    <div class="slds-app-launcher__tile-body">
+                      <a href="/lightning/page/home">Sales Cloud</a>
+                      <p>The primary internal Salesforce org. Used to run our online sales business...
+                        <button aria-describedby="help-0" class="slds-button slds-button_reset slds-text-link">More</button>
+                      </p>
+                      <div class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide" role="tooltip" id="help-0" style="position:absolute;top:80px;right:30px">
+                        <div class="slds-popover__body"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div draggable="true" class="slds-app-launcher__tile slds-text-link_reset slds-is-draggable">
+                      <div class="slds-app-launcher__tile-figure">
+                        <span class="slds-icon_container">
+                            <img src={graphic} width="48" height="48" >
+                        </span>
+                        <div class="slds-m-top_xxx-small">
+                         
+                        </div>
+                      </div>
+                      <div class="slds-app-launcher__tile-body">
+                        <a href="/lightning/n/LWC_New_Room">LWC News Room</a>
+                        <p>This app will shows the latest news around the bla blablabla...
+                          <button aria-describedby="help-1" class="slds-button slds-button_reset slds-text-link">More</button>
+                        </p>
+                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide" role="tooltip" id="help-1" style="position:absolute;top:80px;right:30px">
+                          <div class="slds-popover__body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div draggable="true" class="slds-app-launcher__tile slds-text-link_reset slds-is-draggable">
+                      <div class="slds-app-launcher__tile-figure">
+                        <span class="slds-avatar slds-avatar_large">
+                          <abbr class="slds-avatar__initials slds-icon-custom-27" title="Sales Cloud">ST</abbr>
+                        </span>
+                      </div>
+                      <div class="slds-app-launcher__tile-body">
+                        <a href="/lightning/n/Salesforce_Tom">Salesforce TOM</a>
+                        <p>lightning-app
+                          <button aria-describedby="help-2" class="slds-button slds-button_reset slds-text-link">More</button>
+                        </p>
+                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide" role="tooltip" id="help-2" style="position:absolute;top:80px;right:30px">
+                          <div class="slds-popover__body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div draggable="true" class="slds-app-launcher__tile slds-text-link_reset slds-is-draggable">
+                      <div class="slds-app-launcher__tile-figure">
+                        <span class="slds-avatar slds-avatar_large">
+                          <abbr class="slds-avatar__initials slds-icon-custom-27" title="Sales Cloud">VD</abbr>
+                        </span>
+                      </div>
+                      <div class="slds-app-launcher__tile-body">
+                        <a href="#">Vendors</a>
+                        <p>The primary internal Salesforce org. Used to run our online sales business...
+                          <button aria-describedby="help-4" class="slds-button slds-button_reset slds-text-link">More</button>
+                        </p>
+                        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide" role="tooltip" id="help-4" style="position:absolute;top:80px;right:30px">
+                          <div class="slds-popover__body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+        </div>
+    </div>
+    
+</template>

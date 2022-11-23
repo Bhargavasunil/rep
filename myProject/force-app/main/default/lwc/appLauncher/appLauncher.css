@@ -1,0 +1,11 @@
+.slds-box{
+    background:var(--lwc-colorBackground);
+}
+.head{
+    font-size: 1.125rem;
+    padding-left: 0.5rem;
+}
+.section1{
+    box-sizing: border-box;
+    padding:1px;
+}
