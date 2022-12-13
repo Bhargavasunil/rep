@@ -11,6 +11,9 @@ article div{
     flex-flow: row wrap;
 }
 article div figure{
+    display:flex;
+    justify-content: center;
+    align-items:center;
     flex:1 0 200px;
     width:200px;
     height:300px;

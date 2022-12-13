@@ -1,0 +1,23 @@
+<template>
+     <lightning-card icon-name="action:new_account" title="Create Account">
+        <div slot="actions">
+            <lightning-button variant="brand" 
+                              label="Create" 
+                              class="slds-m-top_small" 
+                              onclick={handleCreate}>
+            </lightning-button>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-input type="text" 
+                                     label="Account Name" 
+                                     name="account name" 
+                                     onchange={handleChange}
+                                     required>
+                                    </lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+     </lightning-card>
+</template>
