@@ -7,7 +7,7 @@ export default class AsyncExample extends LightningElement {
     isLoading;
     async handleCreate(){
         //make a query of input elements 
-        const queryInput = this.template.querySelectorAll('lightning-input');
+        const queryInput = this.template.querySelector('lightning-input');
         console.log(`queryInput is ${queryInput}`);
         //apply validations
         const allValid = this.checkFieldsValidity(queryInput);
@@ -27,10 +27,14 @@ export default class AsyncExample extends LightningElement {
         }
     }
     checkFieldsValidity(fields){                                               //validation function
-      const allValid = fields.reduce(function(validSoFar,field){
-            return validSoFar && field.reportValidit();
+      const allValid = [...fields].reduce(function(validSoFar,field){
+            return validSoFar && field.reportValidity();
       },true);
       return allValid;
   }
-    handleChange(){}
+    handleChange(event){
+      if(event.target.name === "accountName"){
+        this.accountName = event.target.value;
+    }
+    }
 }
